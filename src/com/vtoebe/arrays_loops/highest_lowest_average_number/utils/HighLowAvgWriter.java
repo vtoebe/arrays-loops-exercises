@@ -23,7 +23,7 @@ public class HighLowAvgWriter {
     public String HighLowAvgFound(){
         int high = find.highestNumber(getInputNumbers());
         int low = find.lowestNumber(getInputNumbers());
-        float avg = find.averageNumber(getInputNumbers());
+        float avg = find.averageNumber();
 
         return "Numbers Entered: " + Arrays.toString(getInputNumbers()) +
                 "\nHighest Number: " + high +
