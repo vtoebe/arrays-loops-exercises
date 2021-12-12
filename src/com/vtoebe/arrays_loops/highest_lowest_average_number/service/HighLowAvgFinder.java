@@ -3,8 +3,6 @@ package com.vtoebe.arrays_loops.highest_lowest_average_number.service;
 public class HighLowAvgFinder {
     private int highestNumber = 0;
     private Integer lowestNumber = null;
-    private float averageNumber = 0.2f;
-
 
     public int highestNumber(int[] inputNumbers){
         for (int number:inputNumbers) {
@@ -28,7 +26,7 @@ public class HighLowAvgFinder {
         return lowestNumber;
     }
 
-    public float averageNumber(int[] inputNumbers){
-        return this.averageNumber = (highestNumber + lowestNumber)/2;
+    public float averageNumber(){
+        return (highestNumber + lowestNumber)/2;
     }
 }
