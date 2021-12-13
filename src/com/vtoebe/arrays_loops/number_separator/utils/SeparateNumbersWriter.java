@@ -1,53 +1,25 @@
 package com.vtoebe.arrays_loops.number_separator.utils;
-
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class SeparateNumbersWriter {
+    Scanner scan = new Scanner(System.in);
 
-    private ArrayList<Integer> inputNumbers;
-    private ArrayList<Integer> oddNumbers;
-    private ArrayList<Integer> evenNumbers;
+    private int[] inputNumbers;
 
-    public ArrayList<Integer> getInputNumbers() {
-        return inputNumbers;
-    }
+    public void setInputNumbers() {
+        String userInput = scan.nextLine();
+        String[] userInputStrArr = cleanString(userInput);
+        this.inputNumbers = new int[userInputStrArr.length];
 
-    public void setInputNumbers(String inputNumbers) {
-        String[] numbers = stringToIntArr(inputNumbers);
-
-        for (int i = 0; i==numbers.length; i+=1) {
-            this.inputNumbers.add(Integer.valueOf(numbers[i]));
+        int i = 0;
+        for (String num: userInputStrArr) {
+            this.inputNumbers[i] = Integer.parseInt(num);
+            i++;
         }
     }
 
-    public ArrayList<Integer> getOddNumbers() {
-        for (int n: oddNumbers) {
-            System.out.println(n);
-        }
-        return this.oddNumbers;
-    }
-//
-    public void setOddNumbers(ArrayList<Integer> oddNumbers) {
-        this.oddNumbers = oddNumbers;
-    }
+    public int[] getInputNumbers() { return this.inputNumbers; }
 
-    public ArrayList<Integer> getEvenNumbers() {
-        for (int n: evenNumbers
-        ) {
-            System.out.println(n);
-        }
-        return this.evenNumbers;
-    }
+    public String[] cleanString(String str){ return str.replace(" ", "").split(","); }
 
-    public void setEvenNumbers(ArrayList<Integer> evenNumbers) {
-        this.evenNumbers = evenNumbers;
-    }
-
-    public String[] stringToIntArr(String str){
-        return str.replace(" ", "").split(",");
-    }
-
-    public String separationResult(){
-        return "";
-    }
 }
