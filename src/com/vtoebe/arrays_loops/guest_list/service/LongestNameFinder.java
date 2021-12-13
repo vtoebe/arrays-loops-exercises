@@ -1,9 +1,11 @@
 package com.vtoebe.arrays_loops.guest_list.service;
 
+import java.util.ArrayList;
+
 public class LongestNameFinder {
         private String longestName;
 
-    public String findLongestName(String[] names){
+    public String findLongestName(ArrayList<String> names){
 
         int nameSize = 0;
         for (String name: names) {
@@ -12,7 +14,6 @@ public class LongestNameFinder {
                 longestName = name;
             }
         }
-
         return longestName;
     }
 }
