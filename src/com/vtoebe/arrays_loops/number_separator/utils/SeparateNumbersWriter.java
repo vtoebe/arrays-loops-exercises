@@ -21,8 +21,7 @@ public class SeparateNumbersWriter {
     }
 
     public ArrayList<Integer> getOddNumbers() {
-        for (int n: oddNumbers
-             ) {
+        for (int n: oddNumbers) {
             System.out.println(n);
         }
         return this.oddNumbers;
@@ -44,11 +43,11 @@ public class SeparateNumbersWriter {
         this.evenNumbers = evenNumbers;
     }
 
-    public String[] stringToIntArr(String entry){
-        return entry.replace(" ", "").split(",");
+    public String[] stringToIntArr(String str){
+        return str.replace(" ", "").split(",");
     }
 
     public String separationResult(){
-        return "ugh";
+        return "";
     }
 }
