@@ -1,28 +1,19 @@
 package com.vtoebe.arrays_loops.number_separator.utils;
 
-import javax.swing.*;
+import java.util.ArrayList;
 
 public class SeparateNumbersPrinter {
-    SeparateNumbersWriter write = new SeparateNumbersWriter();
 
     final String NUMBERS_REQUEST = "Please enter at least 5 numbers: ";
 
-    public String requestNumbers(){
-        return JOptionPane.showInputDialog(
-                null,
-                NUMBERS_REQUEST,
-                "Number Separator",
-                JOptionPane.INFORMATION_MESSAGE
-        );
-    }
+    public void requestNumbers(){ System.out.print(NUMBERS_REQUEST);  }
 
-    public void separationResult(String separationResult){
-        JOptionPane.showMessageDialog(
-                null,
-                separationResult,
-                "Result",
-                JOptionPane.INFORMATION_MESSAGE
-        );
+    public void separationResult(ArrayList<Integer> odd, ArrayList<Integer> even){
+        System.out.println("==== Results ====");
+        System.out.println("-- Odd Numbers --");
+        for (int num: odd){ System.out.print(num + "\t"); }
+        System.out.println("\n-- Even Numbers --");
+        for (int num: even){ System.out.print(num + "\t"); }
     }
 
 }
